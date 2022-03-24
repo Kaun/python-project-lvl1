@@ -1,4 +1,4 @@
-import prompt
+# import prompt
 import random
 
 
@@ -28,23 +28,27 @@ def calculate(num_1, num_2, sign):
     return res
    
 
-def cycl_game():
+def cycl_game(game):
     number_attempts = 3
     attempt = 0
     while attempt < number_attempts:
+        attempt += 1
+        game()
         
 
-def main():
+def game_calc():
     num_1, num_2, sign = random_elements()
     res = calculate(num_1, num_2, sign)
     print('Question: {} {} {}'.format(num_1, sign, num_2))
     print(res)
-    player_name = welcome_user()
+    
     
 
+def main():
+    player_name = welcome_user()
+    cycl_game(game_calc)
 
-number_attempts = 3
-attempt = 0
+
 
 main()
 
