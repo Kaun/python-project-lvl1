@@ -17,11 +17,12 @@ while attempt < number_attempts:
     random_num = random.randint(0, 100)
     is_even = even(random_num)
     print('Question:', random_num)
-    answer = input('')
-    if (answer == 'yes' and is_even) or (answer == 'no' and not is_even) :
+    answer = input('Your answer: ')
+    if (answer == 'yes' and is_even) or (answer == 'no' and not is_even):
         print('Correct!')
     else:
-        print("'{}' is wrong answer ;(. Correct answer was '{}'.".format(answer, 'yes' if is_even else 'no' ))
+        print("'{}' is wrong answer ;(. Correct answer was '{}'."
+              .format(answer, 'yes' if is_even else 'no'))
         break
 if attempt == number_attempts:
     print('Congratulations, {}!'.format(player_name))
