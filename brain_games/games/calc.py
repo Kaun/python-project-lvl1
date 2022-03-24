@@ -1,4 +1,8 @@
-from brain_games.control_game import calculate, check_answer, get_random_elements
+from brain_games.control_game import (
+    calculate,
+    check_answer,
+    get_random_elements
+)
 import prompt
 
 
