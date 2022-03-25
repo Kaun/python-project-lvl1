@@ -2,6 +2,10 @@ import prompt
 import random
 
 
+def is_even(num):
+    return 'yes' if num % 2 == 0 else 'no'
+
+
 def get_random_elements():
     num_1 = random.randint(0, 100)
     num_2 = random.randint(0, 100)
@@ -22,7 +26,7 @@ def calculate(num_1, num_2, sign):
 
 def welcome_user():
     name = prompt.string('May I have your name? ')
-    print('Hello,{}!'.format(name))
+    print('Hello, {}!'.format(name))
     return name
 
 
