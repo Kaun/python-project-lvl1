@@ -6,6 +6,17 @@ def is_even(num):
     return 'yes' if num % 2 == 0 else 'no'
 
 
+def nod(num_1, num_2):
+    while True:
+        quotient = num_1 / num_2 
+        rest = num_1 % num_2 
+        if rest != 0:
+            num_1 = num_2
+            num_2 = rest
+        else:
+            return num_2
+
+
 def get_random_elements():
     num_1 = random.randint(0, 100)
     num_2 = random.randint(0, 100)
