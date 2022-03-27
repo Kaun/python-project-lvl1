@@ -4,4 +4,4 @@
 
 ## Игра: "Проверка на чётность"
 Необходимо реализовать игру "Проверка на чётность". Суть игры в следующем: пользователю показывается случайное число. И ему нужно ответить yes, если число чётное, или no — если нечётное:
-<script id="asciicast-gXpO4MtSCZ9nAafgy1vnCpgNY" src="https://asciinema.org/a/gXpO4MtSCZ9nAafgy1vnCpgNY.js" async></script>
+[![asciicast](https://asciinema.org/a/gXpO4MtSCZ9nAafgy1vnCpgNY.svg)](https://asciinema.org/a/gXpO4MtSCZ9nAafgy1vnCpgNY)
