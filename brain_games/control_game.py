@@ -59,6 +59,7 @@ def calculate(num_1, num_2, sign):
 
 
 def welcome_user():
+    print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
     return name
@@ -75,14 +76,14 @@ def check_answer(user_answer, correct_answer):
 
 
 def start_game(game, user_name):
-    number_attempts = 3
+    NUMBER_ATTEMPTS = 3
     attempt = 0
-    while attempt < number_attempts:
+    while attempt < NUMBER_ATTEMPTS:
         attempt += 1
         is_game_over = game()
         if is_game_over:
             break
-    if attempt == number_attempts:
+    if attempt == NUMBER_ATTEMPTS:
         print('Congratulations, {}!'.format(user_name))
     else:
         print("Let's try again, {}!".format(user_name))
