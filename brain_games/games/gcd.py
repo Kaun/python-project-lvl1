@@ -1,6 +1,5 @@
 from brain_games.control_game import (
     check_answer,
-    is_even,
     get_random_elements,
     nod
 )
@@ -8,7 +7,7 @@ import prompt
 
 
 def game_gcd():
-    num_1, num_2, _  = get_random_elements()
+    num_1, num_2, _ = get_random_elements()
     correct_answer = nod(num_1, num_2)
     print('Find the greatest common divisor of given numbers.')
     print('Question: {} {}'.format(num_1, num_2))
