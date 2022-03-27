@@ -6,15 +6,38 @@ def is_even(num):
     return 'yes' if num % 2 == 0 else 'no'
 
 
+def is_prime(num):
+    divider = 2
+    while num % divider != 0:
+        divider += 1
+    return 'yes' if divider == num else 'no'
+
+
 def nod(num_1, num_2):
     while True:
-        quotient = num_1 / num_2 
-        rest = num_1 % num_2 
+        rest = num_1 % num_2
         if rest != 0:
             num_1 = num_2
             num_2 = rest
         else:
             return num_2
+
+
+def generate_arithmetic_progression(element, step, length_seq):
+    seq = []
+    for i in range(length_seq):
+        seq.append(element)
+        element += step
+    return seq
+
+
+def craft_element(seq):
+    seq_craft_el = seq[:]
+    craft_element_number = random.randint(0, len(seq)-1)
+    craft_element = seq_craft_el.pop(craft_element_number)
+    seq_craft_el.insert(craft_element_number, '..')
+    seq_str = " ".join(map(str, seq_craft_el))
+    return (seq_str, craft_element)
 
 
 def get_random_elements():
