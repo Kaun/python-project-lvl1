@@ -70,7 +70,7 @@ def check_answer(user_answer, correct_answer):
         print('Correct!')
         return True
     else:
-        print("'{}' is wrong answer ;(. Correct answer was '{}'."
+        print('"{}" is wrong answer ;(. Correct answer was "{}".'
               .format(user_answer, correct_answer))
         return False
 
