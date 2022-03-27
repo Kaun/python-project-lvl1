@@ -79,10 +79,10 @@ def start_game(game, user_name):
     NUMBER_ATTEMPTS = 3
     attempt = 0
     while attempt < NUMBER_ATTEMPTS:
-        attempt += 1
         is_game_over = game()
         if is_game_over:
             break
+        attempt += 1
     if attempt == NUMBER_ATTEMPTS:
         print('Congratulations, {}!'.format(user_name))
     else:
