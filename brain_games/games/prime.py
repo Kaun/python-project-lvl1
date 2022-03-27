@@ -1,9 +1,7 @@
 import prompt
-import random
 from brain_games.control_game import (
     is_prime,
     check_answer,
-    craft_element,
     get_random_elements,
 )
 
@@ -16,4 +14,3 @@ def game_prime():
     user_answer = prompt.string('Your answer: ').lower()
     is_correct_answer = check_answer(user_answer, correct_answer)
     return False if is_correct_answer else True
-

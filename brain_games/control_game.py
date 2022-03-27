@@ -33,9 +33,9 @@ def generate_arithmetic_progression(element, step, length_seq):
 
 def craft_element(seq):
     seq_craft_el = seq[:]
-    craft_element_number = random.randint(0, len(seq)-1)
-    craft_element = seq_craft_el.pop(craft_element_number)
-    seq_craft_el.insert(craft_element_number, '..')
+    craft_el_number = random.randint(0, len(seq) - 1)
+    craft_element = seq_craft_el.pop(craft_el_number)
+    seq_craft_el.insert(craft_el_number, '..')
     seq_str = " ".join(map(str, seq_craft_el))
     return (seq_str, craft_element)
 
