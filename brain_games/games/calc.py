@@ -1,21 +1,30 @@
-from brain_games.control_game import (
-    calculate,
-    check_answer,
-    get_random_elements
-)
-import prompt
+import random
 
 
-def get_descriptions():
-    
+def calculate(num1, num2, sign):
+    res = 0
+    if sign == '+':
+        res = num1 + num2
+    if sign == '-':
+        res = num1 - num2
+    if sign == '*':
+        res = num1 * num2
+    return res
 
-def game_calc():
-    num_1, num_2, sign = get_random_elements()
-    correct_answer = calculate(num_1, num_2, sign)
-    print('Question: {} {} {}'.format(num_1, sign, num_2))
-    user_answer = prompt.integer('Your answer: ')
-    is_correct_answer = check_answer(user_answer, correct_answer)
-    return False if is_correct_answer else True
+
+def get_description():
+    return 'What is the result of the expression?'
+
+
+def get_question_and_answer():
+    num1 = random.randint(0, 100)
+    num2 = random.randint(0, 100)
+    sign = random.choice(['+', '-', '*'])
+
+    question = '{} {} {}'.format(num1, sign, num2)
+    answer = calculate(num1, num2, sign)
+    # print('Answer ', answer)
+    return question, str(answer)
 
 
 if __name__ == 'main':
