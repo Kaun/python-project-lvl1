@@ -1,16 +1,23 @@
-from brain_games.control_game import (
-    check_answer,
-    get_random_elements,
-    nod
-)
-import prompt
+import random
 
 
-def game_gcd():
-    num_1, num_2, _ = get_random_elements()
-    correct_answer = nod(num_1, num_2)
-    print('Find the greatest common divisor of given numbers.')
-    print('Question: {} {}'.format(num_1, num_2))
-    user_answer = prompt.integer('Your answer: ')
-    is_correct_answer = check_answer(user_answer, correct_answer)
-    return False if is_correct_answer else True
+def get_gcd(num1, num2):
+    while True:
+        rest = num1 % num2
+        if rest != 0:
+            num1 = num2
+            num2 = rest
+        else:
+            return num2
+
+
+def get_description():
+    return 'Find the greatest common divisor of given numbers.'
+
+
+def get_question_and_answer():
+    num1 = random.randint(1, 100)
+    num2 = random.randint(1, 100)
+    question = '{} {}'.format(num1, num2)
+    answer = get_gcd(num1, num2)
+    return question, str(answer)
