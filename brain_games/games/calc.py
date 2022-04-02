@@ -6,6 +6,9 @@ from brain_games.control_game import (
 import prompt
 
 
+def get_descriptions():
+    
+
 def game_calc():
     num_1, num_2, sign = get_random_elements()
     correct_answer = calculate(num_1, num_2, sign)

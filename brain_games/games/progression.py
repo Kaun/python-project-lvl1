@@ -1,22 +1,28 @@
-import prompt
 import random
-from brain_games.control_game import (
-    check_answer,
-    craft_element,
-    get_random_elements,
-    generate_arithmetic_progression,
-)
 
 
-def game_progression():
-    first_element, step, _ = get_random_elements()
+def generate_arithmetic_progression(element, step, length_seq):
+    seq = []
+    for i in range(length_seq):
+        seq.append(element)
+        element += step
+    return seq
+
+
+def get_description():
+    return 'What number is missing in the progression?'
+
+
+def get_question_and_answer():
+    first_element = random.randint(0, 100)
+    step = random.randint(1, 100)
     length_seq = random.randint(5, 10)
+    hidden_index = random.randint(0, length_seq)
+
     progression = generate_arithmetic_progression(
         first_element, step, length_seq
     )
-    question, answer = craft_element(progression)
-    print('What number is missing in the progression?')
-    print('Question: {}'.format(question))
-    user_answer = prompt.integer('Your answer: ')
-    is_correct_answer = check_answer(user_answer, answer)
-    return False if is_correct_answer else True
+    progression[hidden_index], answer = '..', progression[hidden_index]
+    question = ' '.join(map(str, progression))
+
+    return question, str(answer)
