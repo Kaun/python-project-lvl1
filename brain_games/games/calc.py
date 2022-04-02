@@ -23,7 +23,6 @@ def get_question_and_answer():
 
     question = '{} {} {}'.format(num1, sign, num2)
     answer = calculate(num1, num2, sign)
-    # print('Answer ', answer)
     return question, str(answer)
 
 
