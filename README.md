@@ -15,7 +15,7 @@ Repository: [Brain-games](https://github.com/Kaun/python-project-lvl1.git)
 
 Суть игры в следующем: пользователю показывается случайное число. Нужно ответить yes, если число чётное, или no — если нечётное:
 
-[![asciicast](https://asciinema.org/a/97oTAofqQ4aLMEQogkO7MkfWT.svg)](https://asciinema.org/a/97oTAofqQ4aLMEQogkO7MkfWT)
+[![asciicast](https://asciinema.org/a/CXnpnI54ldHtMTZgwpzcNInyA.svg)](https://asciinema.org/a/CXnpnI54ldHtMTZgwpzcNInyA)
 ### Игра: "Калькулятор"
 Команда запуска: **brain-calc**
 
