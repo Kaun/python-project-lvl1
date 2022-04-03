@@ -21,7 +21,7 @@ Repository: [Brain-games](https://github.com/Kaun/python-project-lvl1.git)
 
 Пользователю показывается случайное математическое выражение, например 35 + 16, которое нужно вычислить и записать правильный ответ.
 
-[![asciicast](https://asciinema.org/a/b4p7wFWm9rRvspB8r5otBoSc4.svg)](https://asciinema.org/a/b4p7wFWm9rRvspB8r5otBoSc4)
+[![asciicast](https://asciinema.org/a/5Zuy0V389W3ynSP99ZIBYmMwg.svg)](https://asciinema.org/a/5Zuy0V389W3ynSP99ZIBYmMwg)
 ### Игра "НОД"
 Команда запуска: **brain-gcd**
 
