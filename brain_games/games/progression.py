@@ -17,7 +17,7 @@ def get_question_and_answer():
     first_element = random.randint(0, 100)
     step = random.randint(1, 100)
     length_seq = random.randint(5, 10)
-    hidden_index = random.randint(0, length_seq)
+    hidden_index = random.randint(0, length_seq-1)
 
     progression = generate_arithmetic_progression(
         first_element, step, length_seq
