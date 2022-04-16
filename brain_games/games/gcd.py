@@ -1,14 +1,11 @@
 import random
 
 
-def get_gcd(num1, num2):
-    while True:
-        rest = num1 % num2
-        if rest != 0:
-            num1 = num2
-            num2 = rest
-        else:
-            return num2
+def get_gsd(num1, num2):
+    if not num2:
+        return num1
+    else:
+        return get_gsd(num2, num1 % num2)
 
 
 def get_description():
@@ -18,6 +15,6 @@ def get_description():
 def get_question_and_answer():
     num1 = random.randint(1, 100)
     num2 = random.randint(1, 100)
-    question = '{} {}'.format(num1, num2)
-    answer = get_gcd(num1, num2)
+    question = f'{num1} {num2}'
+    answer = get_gsd(num1, num2)
     return question, str(answer)
