@@ -5,10 +5,9 @@ import random
 def is_prime(num):
     if num < 1:
         return False
-    else:
-        divider = 2
-        while num % divider != 0:
-            divider += 1
+    divider = 2
+    while num % divider != 0:
+        divider += 1
     return True if divider == num else False
 
 
