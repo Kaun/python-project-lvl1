@@ -7,6 +7,7 @@ def start_game(game):
     print('Hello, {}!'.format(name))
 
     print(game.get_description())
+
     rounds_count = 3
     for attempt in range(rounds_count):
         question, answer = game.get_question_and_answer()
@@ -16,7 +17,8 @@ def start_game(game):
         if user_answer == answer:
             print('Correct!')
         else:
-            print(f'"{user_answer}" is wrong answer ;(. Correct answer was "{answer}".')
-            print(f"Let's try again, {name}!")
+            print(f"'{user_answer}' is wrong answer ;(."
+                  f"(Correct answer was '{answer}'.\n')"
+                  f"Let's try again, {name}!")
             return
     print('Congratulations, {}!'.format(name))
