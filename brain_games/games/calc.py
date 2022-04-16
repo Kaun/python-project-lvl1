@@ -19,8 +19,5 @@ def get_question_and_answer():
 
     question = f'{operand1} {operation} {operand2}'
     answer = operations[operation](operand1, operand2)
+
     return question, str(answer)
-
-
-if __name__ == 'main':
-    pass
