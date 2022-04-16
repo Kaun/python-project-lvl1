@@ -1,15 +1,20 @@
 import random
+import operator
+
+operations = {
+        '+': operator.add,
+        '-': operator.sub,
+        '*': operator.mul,
+    }
 
 
-def calculate(num1, num2, sign):
-    res = 0
-    if sign == '+':
-        res = num1 + num2
-    if sign == '-':
-        res = num1 - num2
-    if sign == '*':
-        res = num1 * num2
-    return res
+def calculate(operand1, operation, operand2):
+    if operation == '+':
+        return operations['+'](operand1, operand2)
+    if operation == '-':
+        return operations['-'](operand1, operand2)
+    if operation == '*':
+        return operations['*'](operand1, operand2)
 
 
 def get_description():
@@ -17,12 +22,12 @@ def get_description():
 
 
 def get_question_and_answer():
-    num1 = random.randint(0, 100)
-    num2 = random.randint(0, 100)
-    sign = random.choice(['+', '-', '*'])
+    operand1 = random.randint(0, 100)
+    operand2 = random.randint(0, 100)
+    operation = random.choice(list(operations.keys()))
 
-    question = '{} {} {}'.format(num1, sign, num2)
-    answer = calculate(num1, num2, sign)
+    question = f'{operand1} {operation} {operand2}'
+    answer = operations[operation](operand1, operand2)
     return question, str(answer)
 
 
