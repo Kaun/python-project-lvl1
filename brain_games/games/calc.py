@@ -2,19 +2,10 @@ import random
 import operator
 
 operations = {
-        '+': operator.add,
-        '-': operator.sub,
-        '*': operator.mul,
-    }
-
-
-def calculate(operand1, operation, operand2):
-    if operation == '+':
-        return operations['+'](operand1, operand2)
-    if operation == '-':
-        return operations['-'](operand1, operand2)
-    if operation == '*':
-        return operations['*'](operand1, operand2)
+    '+': operator.add,
+    '-': operator.sub,
+    '*': operator.mul,
+}
 
 
 def get_description():
