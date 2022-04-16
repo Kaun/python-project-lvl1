@@ -21,4 +21,4 @@ def start_game(game):
             return
         print('Correct!')
 
-    print('Congratulations, {name}!')
+    print(f'Congratulations, {name}!')
