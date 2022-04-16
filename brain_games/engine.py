@@ -2,13 +2,13 @@ import prompt
 
 
 def start_game(game):
-    NUMBER_ATTEMPTS = 3
+    rounds_count = 3
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello, {}!'.format(name))
 
     print(game.get_description())
-    for attempt in range(NUMBER_ATTEMPTS):
+    for attempt in range(rounds_count):
         question, answer = game.get_question_and_answer()
         print('Question: {}'.format(question))
 
